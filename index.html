@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document with design Version1.0</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Modern UI Version 2.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0d6efd;
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --light-gray: #e9ecef;
+            --dark-footer: #212529;
+            --footer-text: #adb5bd;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
 
-        h1 {
-            background-color: #007BFF;
+        header {
+            background-color: var(--primary-color);
             color: white;
-            padding: 20px;
-            margin: 0;
+            padding: 30px 20px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        p {
-            padding: 20px;
-            font-size: 16px;
-            line-height: 1.6;
+        main {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .container {
-            padding: 20px;
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        .row h3 {
-            background-color: #e9ecef;
-            padding: 15px;
-            border-left: 5px solid #007BFF;
+        .card h3 {
+            margin-top: 0;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            font-weight: 600;
         }
 
         footer {
-            background-color: #343a40;
-            color: white;
-            padding: 15px 20px;
-            margin-top: 20px;
+            background-color: var(--dark-footer);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 40px;
         }
 
-        footer + footer {
-            background-color: #495057;
+        @media (max-width: 600px) {
+            main {
+                padding: 20px 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>This is Other Branch</h1>
+    <header>
+        <h1>This is Other Branch</h1>
+    </header>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quasi illo ex harum voluptas possimus illum? Recusandae provident consequuntur repellat, itaque, hic enim eligendi sunt dolor, dignissimos amet aliquam explicabo!</p>
+    <main>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quasi illo ex harum voluptas possimus illum?</p>
+        </div>
 
-    <div class="container">
-        <div class="row">
+        <div class="card">
             <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, explicabo deserunt?</h3>
         </div>
-    </div>
+    </main>
 
     <footer>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque consequatur unde beatae dolorum esse inventore vel rem nulla neque eaque eveniet qui cumque non, quaerat facilis velit assumenda ducimus repellat.
-    </footer>
-
-    <footer>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto amet cum similique mollitia voluptate ipsum odio quibusdam libero magnam alias.
+        &copy; 2025 Your Company. All rights reserved. | Modern UI v2.0
     </footer>
 </body>
 </html>
-
-this is my wrong code and this is bug
